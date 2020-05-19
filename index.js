@@ -4,12 +4,11 @@ var buttonDelit = document.getElementById("buttonDelit");
 var buttonUmnojat = document.getElementById("buttonUmnojat");
 var errase = document.getElementById("erase")
 
+var input1 = document.getElementById("number1")
+var input2 = document.getElementById("number2")
+var input3 = document.getElementById("number3")
 
 function onButtonPlusClik() {
-    var input1 = document.getElementById("number1")
-    var input2 = document.getElementById("number2")
-    var input3 = document.getElementById("number3")
-
     var number1 = input1.value;
     var number2 = input2.value;
 
@@ -18,10 +17,6 @@ function onButtonPlusClik() {
 }
 
 function onButtonButtonMinusClik() {
-    var input1 = document.getElementById("number1")
-    var input2 = document.getElementById("number2")
-    var input3 = document.getElementById("number3")
-
     var number1 = input1.value;
     var number2 = input2.value;
 
@@ -30,10 +25,6 @@ function onButtonButtonMinusClik() {
 }
 
 function onButtonDelitClik() {
-    var input1 = document.getElementById("number1")
-    var input2 = document.getElementById("number2")
-    var input3 = document.getElementById("number3")
-
     var number1 = input1.value;
     var number2 = input2.value;
 
@@ -42,10 +33,6 @@ function onButtonDelitClik() {
 }
 
 function onButtonUmnojatClik() {
-    var input1 = document.getElementById("number1")
-    var input2 = document.getElementById("number2")
-    var input3 = document.getElementById("number3")
-
     var number1 = input1.value;
     var number2 = input2.value;
 
