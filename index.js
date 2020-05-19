@@ -26,7 +26,7 @@ function onButtonButtonMinusClik() {
     window.alert(del)
 }
 
-function onButtonDelitClik() {
+function onButtonUmnojatClik() {
     var input1 = document.getElementById("number1")
     var input2 = document.getElementById("number2")
 
@@ -37,7 +37,7 @@ function onButtonDelitClik() {
     window.alert(mnog)
 }
 
-function onButtonUmnojatClik() {
+function onButtonDelitClik() {
     var input1 = document.getElementById("number1")
     var input2 = document.getElementById("number2")
 
