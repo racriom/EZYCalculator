@@ -1,0 +1,22 @@
+.ESYcalculator {
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: aliceblue;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.ESYcalculator .opertaions-block button {
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+}
+
+.ESYcalculator .blocks .block {
+    display: inline-block;
+}
+
+.ESYcalculator .blocks .block label {
+    display: block;
+}
