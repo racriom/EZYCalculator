@@ -4,55 +4,62 @@ var buttonDelit = document.getElementById("buttonDelit");
 var buttonUmnojat = document.getElementById("buttonUmnojat");
 var errase = document.getElementById("erase")
 
+
 function onButtonPlusClik() {
     var input1 = document.getElementById("number1")
     var input2 = document.getElementById("number2")
+    var input3 = document.getElementById("number3")
 
     var number1 = input1.value;
     var number2 = input2.value;
 
     var summ = Number(number1) + Number(number2)
-    window.alert(summ)
+    input3.value = summ;
 }
 
 function onButtonButtonMinusClik() {
     var input1 = document.getElementById("number1")
     var input2 = document.getElementById("number2")
+    var input3 = document.getElementById("number3")
 
     var number1 = input1.value;
     var number2 = input2.value;
 
     var del = Number(number1) - Number(number2)
-    window.alert(del)
-}
-
-function onButtonUmnojatClik() {
-    var input1 = document.getElementById("number1")
-    var input2 = document.getElementById("number2")
-
-    var number1 = input1.value;
-    var number2 = input2.value;
-
-    var mnog = Number(number1) * Number(number2)
-    window.alert(mnog)
+    input3.value = del;
 }
 
 function onButtonDelitClik() {
     var input1 = document.getElementById("number1")
     var input2 = document.getElementById("number2")
+    var input3 = document.getElementById("number3")
+
+    var number1 = input1.value;
+    var number2 = input2.value;
+
+    var mnog = Number(number1) * Number(number2)
+    input3.value = mnog;
+}
+
+function onButtonUmnojatClik() {
+    var input1 = document.getElementById("number1")
+    var input2 = document.getElementById("number2")
+    var input3 = document.getElementById("number3")
 
     var number1 = input1.value;
     var number2 = input2.value;
 
     var podel = Number(number1) / Number(number2)
-    window.alert(podel)
+    input3.value = podel;
 }
 
 function errrase() {
     document.getElementById("number1")
     document.getElementById("number2")
+    document.getElementById("number3")
     number1.value = ""
     number2.value = ""
+    number3.value = ""
 }
 
 
