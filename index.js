@@ -12,17 +12,15 @@ function makeOperation(operationCode) {
     var number1 = Number(input1.value);
     var number2 = Number(input2.value);
     if (operationCode === "+") {
-        var summ = number1 + number2
+        var result = number1 + number2
     } else if (operationCode === "-") {
-        var summ = number1 - number2
+        var result = number1 - number2
     } else if (operationCode === "/") {
-        var summ = number1 / number2
+        var result = number1 / number2
     } else if (operationCode === "*") {
-        var summ = number1 * number2
-    } else {
-        window.alert("Unknown operation")
+        var result = number1 * number2
     }
-    input3.value = summ;
+    input3.value = result;
 }
 
 function onOperationButtonClick(eventObject) {
@@ -40,8 +38,11 @@ function errrase() {
     number3.value = ""
 }
 
-buttonPlus.addEventListener("click", onOperationButtonClick)
-buttonMinus.addEventListener("click", onOperationButtonClick)
-buttonDelit.addEventListener("click", onOperationButtonClick)
-buttonUmnojat.addEventListener("click", onOperationButtonClick)
+
+var operationButton = [buttonPlus, buttonMinus, buttonDelit, buttonUmnojat];
+
+for (var i = 0; i < operationButton.length; i++) {
+    var button = operationButton[i];
+    button.addEventListener("click", onOperationButtonClick);
+}
 errase.addEventListener("click", errrase)
