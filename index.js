@@ -8,36 +8,27 @@ var input1 = document.getElementById("number1")
 var input2 = document.getElementById("number2")
 var input3 = document.getElementById("number3")
 
-function onButtonPlusClik() {
-    var number1 = input1.value;
-    var number2 = input2.value;
-
-    var summ = Number(number1) + Number(number2)
+function makeOperation(operationCode) {
+    var number1 = Number(input1.value);
+    var number2 = Number(input2.value);
+    if (operationCode === "+") {
+        var summ = number1 + number2
+    } else if (operationCode === "-") {
+        var summ = number1 - number2
+    } else if (operationCode === "/") {
+        var summ = number1 / number2
+    } else if (operationCode === "*") {
+        var summ = number1 * number2
+    } else {
+        window.alert("Unknown operation")
+    }
     input3.value = summ;
 }
 
-function onButtonButtonMinusClik() {
-    var number1 = input1.value;
-    var number2 = input2.value;
-
-    var del = Number(number1) - Number(number2)
-    input3.value = del;
-}
-
-function onButtonDelitClik() {
-    var number1 = input1.value;
-    var number2 = input2.value;
-
-    var mnog = Number(number1) * Number(number2)
-    input3.value = mnog;
-}
-
-function onButtonUmnojatClik() {
-    var number1 = input1.value;
-    var number2 = input2.value;
-
-    var podel = Number(number1) / Number(number2)
-    input3.value = podel;
+function onOperationButtonClick(eventObject) {
+    var clickedElement = eventObject.currentTarget;
+    var operation = clickedElement.innerHTML;
+    makeOperation(operation);
 }
 
 function errrase() {
@@ -49,11 +40,8 @@ function errrase() {
     number3.value = ""
 }
 
-
-
-
-buttonPlus.addEventListener("click", onButtonPlusClik)
-buttonMinus.addEventListener("click", onButtonButtonMinusClik)
-buttonDelit.addEventListener("click", onButtonDelitClik)
-buttonUmnojat.addEventListener("click", onButtonUmnojatClik)
+buttonPlus.addEventListener("click", onOperationButtonClick)
+buttonMinus.addEventListener("click", onOperationButtonClick)
+buttonDelit.addEventListener("click", onOperationButtonClick)
+buttonUmnojat.addEventListener("click", onOperationButtonClick)
 errase.addEventListener("click", errrase)
